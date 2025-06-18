@@ -1,0 +1,8 @@
+# Node modules and lock file
+node_modules/
+package-lock.json
+
+.env
+
+# Optional: Ignore build output (if using TypeScript)
+dist/

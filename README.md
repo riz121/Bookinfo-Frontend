@@ -1,1 +1,1 @@
-# Bookinfo-Frontend
+# Bookinfo
