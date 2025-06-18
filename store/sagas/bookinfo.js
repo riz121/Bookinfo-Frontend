@@ -5,12 +5,11 @@ const apiUrl = process.env.BACKEND_URL? process.env.BACKEND_URL : "https://booki
 
 function* fetchbookinfos() {
 	try {
-		console.log("test",apiUrl)
+
 		const response = yield fetch(apiUrl + "/books/");
 	
 		const bookinfoList = yield response.json();
 
-		console.log("bookinfoList",bookinfoList)
 
 		yield put({
 			type: t.bookinfo_FETCH_SUCCEEDED,
@@ -31,7 +30,6 @@ function* watchFetchbookinfos() {
 
 function* addbookinfo(action) {
 	try {
-		console.log("action",action)
 		const body = {
 			title: action.payload?.title || "",
 			isbn: action.payload?.isbn || "",
